@@ -1,0 +1,130 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+/* variables */
+:root{
+    --red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --LightGray: hsl(0, 0%, 98%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+}
+/* general properties */
+html {
+    Font-size: 15px;
+}
+
+h1 {
+    font-weight: 600;
+}
+h1,
+h2 {
+    color: var(--VeryDarkBlue);
+}
+p {
+    color: var(--GrayishBlue);
+}
+/* text title */
+#light{
+    font-weight: 200;
+}
+.text >p{
+    font-size: 1.2em;
+}
+.text h1{
+    font-size: 2.8em;
+} 
+body {
+box-sizing: border-box;
+padding:0;
+margin:0;
+font-family: "Poppins", sans-serif;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: var(--LightGray);
+}
+.text {
+    width: 42rem;
+    text-align: center;
+    line-height: 2em;
+}
+.wrapper{
+    display: grid;
+    grid-template: repeat(2,1fr)/ repeat(3,1fr);
+    width: 85em;
+    height: 44em;
+    margin-top: 2em;
+}
+/* cards properties */
+.card {
+   border-radius: 0.5em;
+    height: 18em;
+    padding-inline: 2.5em;
+    width: 21em;
+    padding-top: 1em;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/* card icons */
+.card svg {
+    position: relative;
+    float: right;
+    top:2em ;
+}
+.a,.b,.c,.d {
+    justify-self: center;
+    align-self: center;
+}
+.a,.c {
+    grid-row: span 2;
+}
+.a {    
+    border-top: 0.5em solid var(--Cyan);
+}
+.b{
+    border-top: 0.5em solid var(--red);
+}
+.c{
+  border-top: 0.5em solid var(--Blue);
+}
+
+ .d{
+    border-top: 0.5em solid var(--Orange);
+ }
+@media (max-width:700px) {
+    .wrapper{
+        grid-template:1fr/1fr;
+        width: auto;
+        height: auto;
+        gap: 2em;
+    }
+    html {
+        font-size: 10px;
+    }
+    .text {
+        width: 32.1rem;
+        margin-top: 3em;
+    }
+    .text >p{
+        font-size: 1.5em;
+    }
+    .text h1{
+        font-size: 2.5em;
+    } 
+    .card {
+         height: 22em;
+         width: 27em;
+     }
+     .card p {
+        font-size: 1.4em;
+     }
+     h2 {
+        font-size: 1.9em;
+     }
+     .c {
+        grid-row: 5;
+     }
+}
